@@ -94,6 +94,121 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+
+      {/* Team Section */}
+      <section id="equipe" className="bg-[#161616] py-12 px-5 text-white">
+        <h2 className="text-4xl font-bold text-center mb-10">EQUIPE</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              name: "Antonio Caue",
+              rm: "RM: 558891",
+              turma: "Turma: 1TDSPG",
+              image: "/Antonio.jpg",
+              github: "https://github.com/ntncaue",
+              linkedin: "https://linkedin.com/in/ntncaue",
+            },
+            {
+              name: "Felipe Gomes",
+              rm: "RM: 557435",
+              turma: "Turma: 1TDSPG",
+              image: "/Felipe.jpg",
+              github: "https://github.com/felipeorikasa",
+              linkedin: "https://linkedin.com/in/ntncaue",
+            },
+            {
+              name: "Antonio Caue",
+              rm: "RM: 558891",
+              turma: "Turma: 1TDSPG",
+              image: "/Marcelo.jpg",
+              github: "https://github.com/ntncaue",
+              linkedin: "https://linkedin.com/in/ntncaue",
+            },
+          ].map((member, idx) => (
+            <div key={idx} className="bg-[#3A3030] rounded-lg p-6 text-center">
+              <img
+                src={member.image}
+                alt={`Foto de ${member.name}`}
+                className="w-24 h-24 object-cover rounded-full mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+              <p className="text-sm text-gray-300">{member.rm}</p>
+              <p className="text-sm text-gray-300 mb-4">{member.turma}</p>
+              <div className="flex justify-center space-x-4">
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white text-xl"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white text-xl"
+                >
+                  <FaLinkedin />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contato" className="py-12 px-5 bg-[#161616] text-white">
+        <div className="max-w-screen-lg mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {/* Left Text Section */}
+            <div>
+              <h2 className="text-4xl font-bold text-left mb-5">Contato</h2>
+              <p className="text-2xl font-bold  mb-10">Para mais informações sobre atendimento ou serviços, preencha o formulário para resposta por email ou nos ligue.</p>
+            </div>
+            {/* Right Form Section */}
+            <div>
+              <form className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <input
+                    type="text"
+                    placeholder="Nome"
+                    className="w-full px-4 py-2 border-2 border-gray-600 rounded-lg bg-transparent text-white placeholder-gray-400"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="w-full px-4 py-2 border-2 border-gray-600 rounded-lg bg-transparent text-white placeholder-gray-400"
+                  />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <input
+                    type="text"
+                    placeholder="Telefone"
+                    className="w-full px-4 py-2 border-2 border-gray-600 rounded-lg bg-transparent text-white placeholder-gray-400"
+                  />
+                  <select className="w-full px-4 py-2 border-2 border-gray-600 rounded-lg bg-[#161616] text-white">
+                    <option value="" disabled>Localização</option>
+                    <option value="br">Brasil</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="de">Alemanha</option>
+                  </select>
+                </div>
+                <textarea
+                  placeholder="Mensagem"
+                  className="w-full px-4 py-2 border-2 border-gray-600 rounded-lg bg-transparent text-white placeholder-gray-400"
+                />
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-transparent border-2 border-gray-600 text-white rounded-lg hover:bg-white hover:text-black transition duration-300"
+                >
+                  Enviar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
