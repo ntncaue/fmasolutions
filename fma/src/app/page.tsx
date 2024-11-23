@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { useState } from 'react';
 
 const Home: React.FC = () => {

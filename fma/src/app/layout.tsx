@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-
-
+import Header from "@/components/Header/page";
+import Footer from "@/components/Footer/page";
 
 
 
@@ -16,9 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body
-      >
-        {children}
+      <body>
+        <Header/>
+          {children}
+        <Footer/>
       </body>
     </html>
   );
