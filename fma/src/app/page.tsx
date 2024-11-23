@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useState } from 'react';
 
 const Home: React.FC = () => {
@@ -58,6 +59,38 @@ const Home: React.FC = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+
+      {/* Services Section */}
+      <section id="servicos" className="bg-[#161616] py-12 px-5 text-white">
+        <h2 className="text-4xl font-bold text-center mb-10">SOLUÇÕES</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Energia Renovável",
+              link: "/solucoes/energia-renovavel",
+            },
+            {
+              title: "Redução do Consumo Energético",
+              link: "/solucoes/reducao-consumo",
+            },
+            {
+              title: "Acesso Universal à Energia",
+              link: "/solucoes/acesso-energia",
+            },
+          ].map((solution, idx) => (
+            <div key={idx} className="bg-[#3A3030] rounded-lg p-6 text-center">
+              <h3 className="text-xl font-semibold mb-4">{solution.title}</h3>
+              <div
+                onClick={() => handleClick(solution.link)}
+                className={`py-2 px-4 bg-[#00000033] text-white border-2 border-black rounded-lg cursor-pointer`}
+              >
+                {loading === solution.link ? 'Carregando...' : 'Ver mais'}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
