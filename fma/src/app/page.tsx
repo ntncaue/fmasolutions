@@ -2,6 +2,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { useState } from 'react';
+import '@/app/globals.css';
 
 const Home: React.FC = () => {
   const [loading, setLoading] = useState<string | null>(null); // Estado para armazenar qual link está carregando
