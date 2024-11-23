@@ -30,6 +30,37 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section id="sobre-nos" className="bg-[#161616] py-12 px-5 text-white">
+        <div className="flex flex-col items-center">
+          <h2 className="text-4xl font-bold mb-5">SOBRE NÓS</h2>
+          <div className="flex flex-wrap justify-between items-center max-w-screen-lg w-full">
+            <div className="flex-1 p-5 text-2xl font-bold" >
+              <p className="text-xl mb-5">
+                O objetivo principal deste projeto é promover a transição energética para fontes renováveis e sustentáveis como energia solar e eólica, com foco em impacto ambiental, inclusão social e crescimento econômico. Nosso objetivo é contribuir para a construção de um futuro sustentável, reduzindo a dependência de combustíveis fósseis, combatendo as mudanças climáticas e promovendo a justiça social.
+              </p>
+              <p className="text-xl mb-5">
+                Projeções para o Setor Energético:
+                Até 2028, as fontes renováveis como solar e eólica devem representar 51% da geração de energia no Brasil, segundo a Empresa de Pesquisa Energética (EPE). Essa transformação destaca a crescente importância das energias limpas na composição da matriz energética nacional, permitindo a redução das emissões de carbono e ajudando no cumprimento das metas climáticas globais.
+              </p>
+              <p className="text-xl mb-5">
+                Pilares do Projeto:
+                Inclusão Social: Garantir acesso a tecnologias de energia limpa e acessível, proporcionando oportunidades de desenvolvimento para comunidades carentes e regiões isoladas, promovendo a justiça social.
+              </p>
+              <p className="text-xl mb-5">
+                Crescimento Econômico: Impulsionar o crescimento econômico sustentável por meio da criação de empregos no setor de energias renováveis e tecnologias limpas, como painéis solares, aerogeradores e inovações em armazenamento de energia.
+              </p>
+              <p className="text-xl mb-5">
+                Impacto Ambiental: Contribuir para a redução das emissões de gases de efeito estufa e a mitigação dos efeitos das mudanças climáticas, ao priorizar soluções baseadas em energias renováveis e sustentáveis.
+              </p>
+              <p className="text-xl mb-5">
+                Este projeto visa, portanto, não apenas transformar o setor energético, mas também criar uma sociedade mais justa e resiliente, com acesso universal à energia e soluções sustentáveis que beneficiem todos os setores da sociedade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 };
